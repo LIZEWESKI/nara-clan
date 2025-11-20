@@ -11,9 +11,17 @@ import { Label } from '@/components/ui/label';
 import AppLayout from '@/layouts/app-layout';
 import SettingsLayout from '@/layouts/settings/layout';
 
+import { edit } from '@/routes/profile';
 
 export default function Profile({mustVerifyEmail,status,}) {
     const { auth } = usePage().props;
+
+    const breadcrumbs= [
+        {
+            title: 'Profile settings',
+            href: edit().url,
+        },
+    ];
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>

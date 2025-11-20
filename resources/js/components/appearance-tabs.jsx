@@ -1,11 +1,8 @@
-import { Appearance, useAppearance } from '@/hooks/use-appearance';
+import { useAppearance } from '@/hooks/use-appearance';
 import { cn } from '@/lib/utils';
-import { LucideIcon, Monitor, Moon, Sun } from 'lucide-react';
+import { Monitor, Moon, Sun } from 'lucide-react';
 
-export default function AppearanceToggleTab({
-    className = '',
-    ...props
-}) {
+export default function AppearanceToggleTab({ className = '',...props }) {
     const { appearance, updateAppearance } = useAppearance();
 
     const tabs = [

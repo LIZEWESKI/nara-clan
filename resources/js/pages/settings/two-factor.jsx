@@ -11,6 +11,13 @@ import { Form, Head } from '@inertiajs/react';
 import { ShieldBan, ShieldCheck } from 'lucide-react';
 import { useState } from 'react';
 
+const breadcrumbs= [
+    {
+        title: 'Two-Factor Authentication',
+        href: show.url(),
+    },
+];
+
 export default function TwoFactor({requiresConfirmation = false,twoFactorEnabled = false,}) {
     const {
         qrCodeSvg,
