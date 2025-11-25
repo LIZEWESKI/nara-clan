@@ -14,8 +14,8 @@ import SettingsLayout from '@/layouts/settings/layout';
 import { edit } from '@/routes/profile';
 
 export default function Profile({mustVerifyEmail,status,}) {
-    const { auth } = usePage().props;
-
+    const { auth, user =  auth.user } = usePage().props;
+    console.log(user);
     const breadcrumbs= [
         {
             title: 'Profile settings',
