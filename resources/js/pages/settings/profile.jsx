@@ -31,7 +31,7 @@ export default function Profile({mustVerifyEmail,status,}) {
                 <div className="space-y-6">
                     <HeadingSmall
                         title="Profile information"
-                        description="Update your name and email address"
+                        description="Update your pseudonym and email address"
                     />
 
                     <Form
@@ -44,21 +44,21 @@ export default function Profile({mustVerifyEmail,status,}) {
                         {({ processing, recentlySuccessful, errors }) => (
                             <>
                                 <div className="grid gap-2">
-                                    <Label htmlFor="name">Name</Label>
+                                    <Label htmlFor="pseudonym">Pseudonym</Label>
 
                                     <Input
-                                        id="name"
+                                        id="pseudonym"
                                         className="mt-1 block w-full"
-                                        defaultValue={auth.user.name}
-                                        name="name"
+                                        defaultValue={auth.user.pseudonym}
+                                        name="pseudonym"
                                         required
-                                        autoComplete="name"
-                                        placeholder="Full name"
+                                        autoComplete="pseudonym"
+                                        placeholder="Suave"
                                     />
 
                                     <InputError
                                         className="mt-2"
-                                        message={errors.name}
+                                        message={errors.pseudonym}
                                     />
                                 </div>
 

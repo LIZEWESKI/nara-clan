@@ -27,19 +27,19 @@ export default function Register() {
                     <>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
-                                <Label htmlFor="name">Name</Label>
+                                <Label htmlFor="pseudonym">Pseudonym</Label>
                                 <Input
-                                    id="name"
+                                    id="pseudonym"
                                     type="text"
                                     required
                                     autoFocus
                                     tabIndex={1}
-                                    autoComplete="name"
-                                    name="name"
-                                    placeholder="Full name"
+                                    autoComplete="pseudonym"
+                                    name="pseudonym"
+                                    placeholder="Suave"
                                 />
                                 <InputError
-                                    message={errors.name}
+                                    message={errors.pseudonym}
                                     className="mt-2"
                                 />
                             </div>
@@ -56,6 +56,20 @@ export default function Register() {
                                     placeholder="email@example.com"
                                 />
                                 <InputError message={errors.email} />
+                            </div>
+
+                            <div className="grid gap-2">
+                                <Label htmlFor="servers">Servers</Label>
+                                <Input
+                                    id="servers"
+                                    type="servers"
+                                    required
+                                    tabIndex={2}
+                                    autoComplete="servers"
+                                    name="servers"
+                                    placeholder="e.g. Mylaise, Tylezia"
+                                />
+                                <InputError message={errors.servers} />
                             </div>
 
                             <div className="grid gap-2">
