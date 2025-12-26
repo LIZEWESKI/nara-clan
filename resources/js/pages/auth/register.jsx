@@ -9,16 +9,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import AuthLayout from '@/layouts/auth-layout';
-import Layout from '@/layouts/layout';
 
 export default function Register() {
     return (
-        <Layout>
             <AuthLayout
                 title="Create an account"
                 description="Enter your details below to create your account"
             >
-                <Head title="Register" />
+                <Head title="Sign up" />
                 <Form
                     {...store.form()}
                     resetOnSuccess={['password', 'password_confirmation']}
@@ -127,6 +125,5 @@ export default function Register() {
                     )}
                 </Form>
             </AuthLayout>
-        </Layout>
     );
 }
