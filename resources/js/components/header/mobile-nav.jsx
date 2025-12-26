@@ -15,6 +15,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Menu} from "lucide-react"
 import { GuestDropdown } from './guest-dropdown'
 import { UserDropdown } from './user-dropdown'
+import { home } from '@/routes'
+import AppLogoIcon from '../app-logo-icon'
 const MobileNav = ({user, url, navigation, className, legalNavigation}) => {
     const [open, setOpen] = useState(false);
     const isLegalActive = url === "/legal" || url === "/terms-of-service" || url === "/privacy-policy" || url === "/about" || url === "/contact"
@@ -28,7 +30,7 @@ const MobileNav = ({user, url, navigation, className, legalNavigation}) => {
       <DrawerContent>
         <DrawerHeader className="text-start space-y-2">
           <DrawerTitle className={`${url === "/" && "text-muted-foreground"}`}>
-            <Link href="/" onClick={() => setOpen(false)}>
+            <Link href={home()} onClick={() => setOpen(false)}>
               Home
             </Link>
           </DrawerTitle>
@@ -41,7 +43,6 @@ const MobileNav = ({user, url, navigation, className, legalNavigation}) => {
             </DrawerTitle>
           ))}
 
-          {/* Legal Accordion */}
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="legal" className="border-0">
               <AccordionTrigger className={`p-0 ${isLegalActive ? "text-muted-foreground" : ""}`}>
@@ -66,12 +67,12 @@ const MobileNav = ({user, url, navigation, className, legalNavigation}) => {
         </DrawerHeader>
 
         <DrawerFooter>
-          <DrawerDescription>&copy; {new Date().getFullYear()} Noir. All rights reserved.</DrawerDescription>
+          <DrawerDescription>&copy; {new Date().getFullYear()} Nara. All rights reserved.</DrawerDescription>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
-        <Link href="/" className="flex items-center space-x-2 transition-colors hover:opacity-90">
-          <AppLogo />
+        <Link href={home()} className="flex items-center space-x-2 transition-colors hover:opacity-90">
+          <AppLogoIcon />
         </Link>
         <div className='space-x-2 flex items-center'>
           {user ? <UserDropdown user={user}/>: <GuestDropdown/>}

@@ -1,13 +1,14 @@
 import { Github } from "lucide-react"
 import { Link } from "@inertiajs/react"
-import AppLogo from "@/components/app-logo"
+import AppLogoIcon from "@/components/app-logo-icon"
+import { home } from "@/routes"
 
 export function Footer() {
   const navigation = {
     main: [
-      { name: "Rooms", href: "/rooms" },
-      { name: "Reservations", href: "/reservations" },
-      { name: "Gallery", href: "/gallery" },
+      { name: "Marketplace", href: "/marketplace" },
+      { name: "Kamas", href: "/kamas" },
+      { name: "Pricing", href: "/pricing" },
     ],
     legal: [
       { name: "Legal Information", href: "/legal" },
@@ -22,12 +23,12 @@ export function Footer() {
     <footer className="max-w-full border-t bg-background md:px-20 py-4 px-4">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
         <div className="space-y-4">
-          <Link href="/" className="inline-flex items-center space-x-2 hover:opacity-90">
-            <AppLogo />
+          <Link href={home()} className="inline-flex items-center space-x-2 hover:opacity-90">
+            <AppLogoIcon />
           </Link>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            &copy; {new Date().getFullYear()} Noir Inc. All rights reserved.
-          </p>
+          {/* <p className="text-sm text-muted-foreground leading-relaxed">
+            &copy; {new Date().getFullYear()} Nara Inc. All rights reserved.
+          </p> */}
         </div>
 
         <div>

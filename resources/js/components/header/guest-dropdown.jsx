@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 import { router } from "@inertiajs/react"
+import { dashboard, login, register } from '@/routes';
 
 export function GuestDropdown() {
   return (
@@ -30,11 +31,11 @@ export function GuestDropdown() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem onClick={() => router.get(route("login"))}>
+          <DropdownMenuItem onClick={() => router.get(login())}>
             <LogIn className="mr-2 h-4 w-4" />
             <span>Log In</span>
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.get(route("register"))}>
+          <DropdownMenuItem onClick={() => router.get(register())}>
             <UserPlus className="mr-2 h-4 w-4" />
             <span>Create Account</span>
           </DropdownMenuItem>

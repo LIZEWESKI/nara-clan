@@ -2,15 +2,11 @@ import AppLogoIcon from './app-logo-icon';
 
 export default function AppLogo() {
     return (
-        <>
-            <div className="flex aspect-square size-8 items-center justify-center rounded-md text-sidebar-primary-foreground">
-                <AppLogoIcon />
-            </div>
-            <div className="ml-1 grid flex-1 text-left text-sm">
-                <span className="mb-0.5 truncate leading-tight font-semibold">
-                    Nara Clan Fuckers
-                </span>
-            </div>
-        </>
+        <div className="relative">
+        <AppLogoIcon/>
+        <span className="absolute text-xl font-bold leading-relaxed tracking-wide left-[29px] top-1" style={{ WebkitTextStroke: '0.5px hsl(var(--muted-foreground))'}}>
+            Nara.
+        </span>
+        </div>
     );
 }

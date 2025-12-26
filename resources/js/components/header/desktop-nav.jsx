@@ -6,12 +6,13 @@ import { ChevronDown } from "lucide-react"
 
 import { UserDropdown } from './user-dropdown'
 import { GuestDropdown } from './guest-dropdown'
+import { home } from '@/routes'
 const DesktopNav = ({user, url, navigation, className, legalNavigation}) => {
 
   return (
     <div className={`justify-between items-center ${className}`}>
         <nav className='flex gap-3 items-center'>
-          <Link href="/" className="flex items-center space-x-2  hover:opacity-90">
+          <Link href={home()} className="flex items-center space-x-2">
             <AppLogo />
           </Link>
         </nav>
@@ -51,7 +52,7 @@ const DesktopNav = ({user, url, navigation, className, legalNavigation}) => {
                   ))}
                 </DropdownMenuContent>
             </DropdownMenu>
-          
+
           </nav>
         <div className='space-x-2 flex items-center'>
           {user ? <UserDropdown user={user}/>: <GuestDropdown/>}

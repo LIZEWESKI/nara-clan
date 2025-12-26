@@ -9,7 +9,7 @@ import { initializeTheme } from './hooks/use-appearance';
 const appName = import.meta.env.VITE_APP_NAME || 'Nara Clan';
 
 createInertiaApp({
-    title: (title) => (title ? `${title} - ${appName}` : appName),
+    title: (title) => (title ? title : appName),
     resolve: (name) =>
         resolvePageComponent(
             `./pages/${name}.jsx`,

@@ -7,9 +7,9 @@ const Header = () => {
   const {auth} = usePage().props
   const {url} = usePage();
   const navigation = [
-    { name: "Rooms", href: "/rooms" },
-    { name: "Reservations", href: "/reservations" },
-    { name: "Gallery", href: "/gallery" },
+    { name: "Marketplace", href: "/marketplace" },
+    { name: "Kamas", href: "/kamas" },
+    { name: "Pricing", href: "/pricing" },
   ]
   const legalNavigation = [
     { name: "Legal Information", href: "/legal" },

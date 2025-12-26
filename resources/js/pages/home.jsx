@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <Layout>
-            <Head title="Welcome"/>
+            <Head title="Nara"/>
             <h1>Testing here</h1>
         </Layout>
     );
