@@ -16,13 +16,16 @@ import { store } from '@/routes/login';
 import { request } from '@/routes/password';
 import { Form, Head } from '@inertiajs/react';
 import { Twitch } from 'lucide-react';
+import { useEffect } from 'react';
+import { toast } from 'sonner';
 
 
-export default function Login({
-    status,
-    canResetPassword,
-    canRegister,
-}) {
+export default function Login({status,canResetPassword,canRegister}){
+    
+    useEffect(() => {
+        status && toast(status, {position: "top-center"})
+    },[status])
+
     return (
         <AuthLayout
             title="Log in to your account"
@@ -116,12 +119,6 @@ export default function Login({
                     </>
                 )}
             </Form>
-
-            {status && (
-                <div className="mb-4 text-center text-sm font-medium text-green-600">
-                    {status}
-                </div>
-            )}
         </AuthLayout>
     );
 }

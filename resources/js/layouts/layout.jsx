@@ -1,5 +1,6 @@
 import Header from '@/components/header/header';
 import { Footer } from '@/components/footer/user-layout-footer';
+import { Toaster } from 'sonner';
 export default function Layout({ children }) {
     return (
         <div className="flex flex-col gap-4 h-screen w-full min-h-screen">
@@ -8,6 +9,7 @@ export default function Layout({ children }) {
                 {children}
             </main>
             <Footer/>
+            <Toaster />
         </div>
     );
 }

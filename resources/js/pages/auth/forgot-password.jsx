@@ -10,8 +10,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
+import { toast } from 'sonner';
+import { useEffect } from 'react';
 
 export default function ForgotPassword({ status }) {
+    useEffect(() => {
+        status && toast(status, {position: "top-center"})
+    },[status])
     return (
         <AuthLayout
             title="Forgot password"
@@ -19,11 +24,7 @@ export default function ForgotPassword({ status }) {
         >
             <Head title="Forgot password" />
 
-            {status && (
-                <div className="mb-4 text-center text-sm font-medium text-green-600">
-                    {status}
-                </div>
-            )}
+            
 
             <div className="space-y-6">
                 <Form {...email.form()}>
@@ -64,6 +65,7 @@ export default function ForgotPassword({ status }) {
                     <TextLink href={login()}>log in</TextLink>
                 </div>
             </div>
+
         </AuthLayout>
     );
 }
