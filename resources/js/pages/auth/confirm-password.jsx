@@ -42,7 +42,7 @@ export default function ConfirmPassword() {
                                 {processing && <Spinner />}
                                 Confirm password
                             </Button>
-                            <Button className="w-full" variant="secondary" onClick={() => window.history.back()}>Cancel</Button>
+                            <Button className="w-full" type="button" variant="secondary" onClick={() => window.history.back()}>Cancel</Button>
                         </div>
                     </div>
                 )}

@@ -24,7 +24,7 @@ export default function Register() {
     const servers = [
         {
         type : "Dofus",
-        lists: ["Brial","Dakal","Draconiros","Hell Mina","Imagiro","Kourial","Mikhal","Ombre(Shadow)","Orukam","Rafal","Salar","TalKasha","Tylezia"],
+        lists: ["Brial","Dakal","Draconiros","Hell Mina","Imagiro","Kourial","Mikhal","Ombre","Orukam","Rafal","Salar","TalKasha","Tylezia"],
         },
         {
         type : "Dofus Retro",
@@ -32,7 +32,7 @@ export default function Register() {
         },
         {
         type : "Dofus Touch",
-        lists: ["blair","Kelerog","Talok","Tiliwan"]
+        lists: ["Blair","Kelerog","Talok","Tiliwan"]
         },
         {
         type : "Wakfu",
@@ -85,7 +85,7 @@ export default function Register() {
                                         <SelectTrigger className="w-full">
                                             <SelectValue placeholder="Select a server" />
                                         </SelectTrigger>
-                                        <SelectContent>
+                                        <SelectContent className="h-[250px]">
                                             {servers.map((server,i) => (
                                             <SelectGroup key={i}>
                                                 <SelectLabel>{server.type}</SelectLabel>

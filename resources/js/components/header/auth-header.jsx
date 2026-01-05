@@ -7,7 +7,7 @@ const AuthHeader = () => {
   const {auth} = usePage().props
   const {url} = usePage()
   return (
-    <header className="fixed top-0 right-0 left-0 bg-transparent md:px-20 py-2 px-4 z-50 flex justify-between items-center">
+    <header className="fixed top-0 right-0 left-0 bg-background md:px-20 py-2 px-4 z-50 flex justify-between items-center">
       <Link href={home()}>
           <AppLogoIcon />
       </Link>

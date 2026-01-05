@@ -7,9 +7,9 @@ export default function AuthSimpleLayout({
     description,
 }) {
     return (
-        <div className="flex min-h-svh flex-col items-center justify-center gap-6 bg-background pb-6 px-6 md:pb-10 md:px-10">
+        <div className="flex min-h-svh flex-col items-center bg-background pt-14 md:pt-16 px-6 pb-6 md:px-10 md:pb-10">
             <AuthHeader/>
-            <div className="w-full flex max-w-sm h-screen items-center">
+            <main className="w-full flex max-w-sm flex-1 items-center">
                 <div className="flex w-full flex-col gap-8">
                     <div className="flex flex-col items-center gap-4 flex-grow">
                         <div className="flex flex-col items-center gap-1 text-center">
@@ -21,7 +21,7 @@ export default function AuthSimpleLayout({
                     </div>
                     {children}
                 </div>
-            </div>
+            </main>
             <AuthFooter/>
         </div>
     );
